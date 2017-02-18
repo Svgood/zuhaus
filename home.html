@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZuHause</title>
+	<meta charset="utf-8">
+	<link rel="icon" 
+      type="image/png" 
+      href="favico.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+	var used = ""
+	var txtcolumn1 = $("<div></div>").text("")
+	var txtcolumn2 = $("<div></div>").text("")
+	var h1 = $("<h1></h1>").text("Beautiful House")
+	var p = $("<p></p>").text("Fabulous Acadian on acre lot in French Branch subdivision. The inviting foyer allows entry to the formal living & dining on the right & opens to the spacious great room/den ahead & to a corner stone-faced fireplace A wall of windows overlooking to the patio. Kitchen features granite countertops with updated cabinets & appliances. The breakfast area is surrounded by windows exposing the secluded backyard. Side service entrance leads to laundry, kitchen & garage. Washer, dryer & Refrigerator included.")
+	var table = $("<table><tr><td><img src='dl.png'></td><td></td></tr><tr><td><img src='m2.png'></td><td></td></tr><tr><td><img src='y.png'></td><td></td></tr><tr><td><img src='p.png'></td><td></td></tr></table>")
+
+	var ar1 = $("<a><img id='larrow' src='larrow.png'></a>")
+	var ar2 = $("<a><img id='rarrow' src='rarrow.png'></a>")
+
+	txtcolumn1.attr("id", "txtc1")
+	txtcolumn1.append(table)
+
+	txtcolumn2.attr("id", "txtc2")
+	txtcolumn2.append(h1)
+	txtcolumn2.append(p)
+	txtcolumn2.append(ar1).append(ar2)
+
+	$(".main").append(txtcolumn1)
+	$(".main").append(txtcolumn2)
+
+	document.getElementsByTagName("td")[1].innerHTML = "350000"
+	document.getElementsByTagName("td")[3].innerHTML = "2555"
+	document.getElementsByTagName("td")[5].innerHTML = "1997"
+	document.getElementsByTagName("td")[7].innerHTML = "4-10"
+
+	$("#img1").click(function()
+	{
+		$("#txtc2").fadeIn(0)
+		used = "#img1"
+		$(this).css("opacity", 1)
+		$("#img2").fadeOut()
+		$("#img3").fadeOut()
+		$("#img4").fadeOut()
+
+		$("#txtc1").animate({left: "0px"}, 1500)
+		$("#txtc2").animate({left: "400px"}, 1500)
+	})
+	$("#img2").click(function()
+	{	
+		$("#txtc2").fadeIn()
+		used = "#img2"
+		$(this).css("opacity", 1)
+		$("#img1").fadeOut()
+		$("#img3").fadeOut()
+		$("#img4").fadeOut()
+
+		$(this).css("position","absolute")
+		$(this).animate({left: "0px"}, "slow")
+		$("#txtc1").animate({left: "0px"}, 1500)
+		$("#txtc2").animate({left: "400px"}, 1500)
+	})
+	$("#img3").click(function()
+	{
+		$("#txtc2").fadeIn()
+		used = "#img3"
+		$(this).css("opacity", 1)
+		$("#img1").fadeOut()
+		$("#img2").fadeOut()
+		$("#img4").fadeOut()
+
+		$(this).css("position","absolute")
+		$(this).animate({top: "0px"}, "slow")
+		$("#txtc1").animate({left: "0px"}, 1500)
+		$("#txtc2").animate({left: "400px"}, 1500)
+	})
+	$("#img4").click(function()
+	{
+		$("#txtc2").fadeIn()
+		used = "#img4"
+		$(this).css("opacity", 1)
+		$("#img1").fadeOut()
+		$("#img3").fadeOut()
+		$("#img2").fadeOut()
+
+		$(this).css("position","absolute")
+		$(this).animate({left: "0px", top: "0px"}, "slow")
+		$("#txtc1").animate({left: "0px"}, 1500)
+		$("#txtc2").animate({left: "400px"}, 1500)
+	})
+	$("#larrow").click(function()
+	{
+		$("#txtc1").animate({left: "-1000px"},500)
+		$("#txtc2").animate({left: "1500px"},500).fadeOut()
+		$(used).css("opacity", "0.4")
+		$(used).css("position", "static")
+		$(used).addClass(".main img:hover")
+		$("#img1").fadeIn()
+		$("#img3").fadeIn()
+		$("#img2").fadeIn()
+		$("#img4").fadeIn()
+
+	})
+})
+
+	</script>
+	<style type="text/css">
+		html {
+			font-family: "Helvetica Neue"
+		}
+		.navbar ul {
+			position: fixed;
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    top: 0;
+			}
+
+		.navbar li {
+			font-size: 18px;
+    		float: left;
+			}
+
+		.navbar li a {
+		    display: block;
+		    color: white;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+		.navbar li a:hover {
+   			 background-color: #111;
+		}
+		.navbar {
+			position: fixed;
+			height: 50px;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: #222;
+			z-index: 100;
+		}
+		.header {
+			position: relative;
+			width: 850px;
+			height: 150px;
+			margin-left: auto;
+			margin-right: auto;
+			top: 20px;
+			background-color: lightgrey;
+		}
+		.main {
+			position: relative;
+			height: 800px;
+			width: 850px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			top: 0;
+			background-color: #f2f2f2;
+		}
+		.wrap {
+			width: 850px;
+			height: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			vertical-align: top;
+		}
+		.navlist {
+			vertical-align: top;
+		}
+		.main img {
+			margin-left: 10%;
+			margin-top: 50px;
+			opacity: 0.4
+		}
+		.main img:hover {
+			opacity: 1;
+		}
+		#txtc1 {
+			top: 50%;
+			left: -1000px;
+			margin-left: 10%;
+			width: 300px;
+			height: 300px;
+			background-color: white;
+			position: absolute;
+			border-radius: 4px;
+		}
+		#txtc1 img {
+			opacity: 1;
+			margin-left: 10px;
+			margin-top: 10px;
+			width: 40px;
+			height: 40px;
+		}
+		#txtc1 table {
+			margin-top: 20px;
+		}
+		#txtc1 td {
+			width: 100px;
+			text-align: center;
+			font-size: 24px;
+		}
+		#txtc2 {
+			margin-top: 50px;
+			left: 1500px;
+			width: 400px;
+			height: 650px;
+			top: 0;
+			background-color: white;
+			position: absolute;
+			border-radius: 4px;
+		}
+		#txtc2 h1 {
+			font-family: "Niagara Solid";
+			text-align: center;
+			margin-top: 20px;
+			font-size: 36px;
+		}
+		#txtc2 p {
+			font-size: 24px;
+			margin-left: 25px;
+			margin-right: 25px;
+			text-align: justify;
+		}
+		#txtc2 img {
+			margin-top: -10px;
+			margin-left: 55px;
+			width: 120px;
+			height: 60px;
+		}
+		.footer {
+			background-color: #222;
+			margin: 0px auto 0px auto;
+			height: 75px;
+			width: 850px;
+			color: white;
+			font-size: 20px;
+		}
+		.footer ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    top: 0;
+		    display: block;
+			}
+
+		.footer li {
+			padding: 5px 16px;
+			width: 300px;
+			}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<div class="wrap">
+				<img src="Ico.png" width="50" height="50">
+				<ul class="navlist">
+					<li><img src="Ico.png" width="50" height="50"></li>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="rent.html">Rent</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="header">
+		<img class="header" src="header.jpg">
+	</div>
+	<div class = "main">
+		<img id="img1" src="kv1.jpg" width="300" height="300">
+		<img id="img2" src="kv2.jpg" width="300" height="300">
+		<br>
+		<img id="img3" src="kv3.jpg" width="300" height="300">
+		<img id="img4" src="kv4.jpg" width="300" height="300">
+	</div>
+	<div class="footer"> 
+		<ul>
+			<li>All rights are not reserved</li>
+			<li>© 2017–2017</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZuHause</title>
+	<meta charset="utf-8">
+	<link rel="icon" 
+      type="image/png" 
+      href="favico.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		var mainh = 1000;
+
+$(document).ready(function(){
+	$(".middletd").text("Fabulous Acadian on acre lot in French Branch subdivision. The inviting foyer allows entry to the formal living & dining on the right & opens to the spacious great room/den ahead & to a corner stone-faced fireplace A wall of windows overlooking to the patio....")
+})
+function showMore()
+{
+	
+	btclone = document.getElementById('bt').cloneNode(true)
+	$("#bt").remove()
+
+	addRandom()
+
+	$(".main").append(btclone)
+}
+function addRandom()
+{
+	for (i = 0; i < 6; i++)
+	{
+	var clone = document.getElementById('row').cloneNode(true)
+	var rand = Math.floor((Math.random()*4+1))	
+	rand = "kv" + rand + ".jpg"
+	$(".main").append(clone)
+	$("#rowimg:last").attr("src", rand)
+	mainh += $("#row").outerHeight(true)
+	$(".main").css("height", mainh + "px")
+	}
+}
+	</script>
+	<style type="text/css">
+		html {
+			font-family: "Helvetica Neue"
+		}
+		.navbar ul {
+			position: fixed;
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    top: 0;
+			}
+
+		.navbar li {
+			font-size: 18px;
+    		float: left;
+			}
+
+		.navbar li a {
+		    display: block;
+		    color: white;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+		.navbar li a:hover {
+   			 background-color: #111;
+		}
+		.navbar {
+			position: fixed;
+			height: 50px;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: #222;
+			z-index: 100;
+		}
+		.header {
+			position: relative;
+			width: 850px;
+			height: 150px;
+			margin-left: auto;
+			margin-right: auto;
+			top: 40px;
+			background-color: lightgrey;
+			z-index: 0;
+		}
+		.header img {
+			z-index: 0;
+		}
+		.main {
+			position: relative;
+			height: 1000px;
+			width: 850px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			background-color: #f2f2f2;
+			z-index: 10;
+		}
+		.wrap {
+			width: 850px;
+			height: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			vertical-align: top;
+		}
+		.navlist {
+			vertical-align: top;
+		}
+		#search {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#search input {
+			width: 200px;
+			height: 15px;
+			margin-top: 25px;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 4px;
+			background: #555 url(search.png) no-repeat;
+		}
+
+		#row {
+			width: 750px;
+			height: 200px;
+			margin-top: 25px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: white;
+			border-radius: 4px;
+		}
+		#rowimg{
+			width: 180px;
+			height: 180px;
+			opacity: 1;
+			margin-left: 15px;
+			margin-top: 10px;
+		}
+		#row th {
+			font-family: "Niagara Solid";
+			text-align: left;
+			font-size: 36px;
+			height: 50px;	
+			padding-left: 15px;
+		}
+		.middletd {
+			height: 80px;
+			font-size: 18px;
+			text-align: justify;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		#lasttd {
+			height: 50px;
+			font-size: 20px;
+			padding-left: 15px;
+
+		}
+		td ul {
+			margin: 0;
+			padding: 0;
+		    list-style-type: none;
+		    overflow: hidden; 		
+		    margin-left: 0;
+		}
+		td ul li {
+			display: inline-block;
+		    text-align: center;
+		}
+		td ul li img {
+			width: 25px;
+			height: 18px;
+		}
+		#bt {
+			position: relative;
+			padding-top: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 30px;
+			height: 30px;
+		}
+		#more {
+			background-color: white;
+			border: none;
+			text-decoration: none;
+			font-size: 28px;
+			font-family: "Niagara Solid";
+			color: black;
+			border-radius: 4px;
+			transition-duration: 0.4s;
+		}
+		#more:hover {
+			background-color: black;
+			color: white;
+		}
+		.footer {
+			background-color: #222;
+			margin: 0px auto 0px auto;
+			height: 75px;
+			width: 850px;
+			color: white;
+			font-size: 20px;
+		}
+		.footer ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    top: 0;
+		    display: block;
+			}
+
+		.footer li {
+			padding: 5px 16px;
+			width: 300px;
+			}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<div class="wrap">
+				<img src="Ico.png" width="50" height="50">
+				<ul class="navlist">
+					<li><img src="Ico.png" width="50" height="50"></li>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="rent.html">Rent</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="header">
+		<img src="header.jpg">
+	</div>
+	<div class = "main">
+		<div id="search">
+			<input type="text" name="search" autocomplete="off">
+		</div>
+		<div id="row">
+			<table>
+				<tr>
+					<td rowspan="3"><img id="rowimg" src="kv1.jpg"></td>
+					<th>Beautiful House, Zigelsstrasse 2B</th>
+				</tr>
+				<tr>
+					<td class="middletd">sometText</td>
+				</tr>
+				<tr>
+					<td id="lasttd">
+						<ul>
+							<li><img src="dl.png"></li>
+							<li>35555</li>
+							<li><img src="m2.png"></li>
+							<li>2555</li>
+							<li><img src="y.png"></li>
+							<li>1997</li>
+							<li><img src="p.png">4-10</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="row">
+			<table>
+				<tr>
+					<td rowspan="3"><img id="rowimg" src="kv2.jpg"></td>
+					<th>Beautiful House, Zigelsstrasse 2B</th>
+				</tr>
+				<tr>
+					<td class="middletd">sometText</td>
+				</tr>
+				<tr>
+					<td id="lasttd">
+						<ul>
+							<li><img src="dl.png"></li>
+							<li>35555</li>
+							<li><img src="m2.png"></li>
+							<li>2555</li>
+							<li><img src="y.png"></li>
+							<li>1997</li>
+							<li><img src="p.png">4-10</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="row">
+			<table>
+				<tr>
+					<td rowspan="3"><img id="rowimg" src="kv3.jpg"></td>
+					<th>Beautiful House, Zigelsstrasse 2B</th>
+				</tr>
+				<tr>
+					<td class="middletd">sometText</td>
+				</tr>
+				<tr>
+					<td id="lasttd">
+						<ul>
+							<li><img src="dl.png"></li>
+							<li>35555</li>
+							<li><img src="m2.png"></li>
+							<li>2555</li>
+							<li><img src="y.png"></li>
+							<li>1997</li>
+							<li><img src="p.png">4-10</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="row">
+			<table>
+				<tr>
+					<td rowspan="3"><img id="rowimg" src="kv4.jpg"></td>
+					<th>Beautiful House, Zigelsstrasse 2B</th>
+				</tr>
+				<tr>
+					<td class="middletd">sometText</td>
+				</tr>
+				<tr>
+					<td id="lasttd">
+						<ul>
+							<li><img src="dl.png"></li>
+							<li>35555</li>
+							<li><img src="m2.png"></li>
+							<li>2555</li>
+							<li><img src="y.png"></li>
+							<li>1997</li>
+							<li><img src="p.png">4-10</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="bt">
+			<input id="more" type="button" name="bt" value="More" onclick="showMore()">
+		</div>
+	</div>
+	<div class="footer"> 
+		<div class="footer"> 
+		<ul>
+			<li>All rights are not reserved</li>
+			<li>© 2017–2017</li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>

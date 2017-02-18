@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZuHause</title>
+	<meta charset="utf-8">
+	<link rel="icon" 
+      type="image/png" 
+      href="favico.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style type="text/css">
+		html {
+			font-family: "Helvetica Neue"
+		}
+		.navbar ul {
+			position: fixed;
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    top: 0;
+			}
+
+		.navbar li {
+			font-size: 18px;
+    		float: left;
+			}
+
+		.navbar li a {
+		    display: block;
+		    color: white;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+		.navbar li a:hover {
+   			 background-color: #111;
+		}
+		.navbar {
+			position: fixed;
+			height: 50px;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: #222;
+			z-index: 100;
+		}
+		.navbar {
+			position: fixed;
+			height: 50px;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: #222;
+			z-index: 100;
+		}
+		.header {
+			position: relative;
+			width: 850px;
+			height: 150px;
+			margin-left: auto;
+			margin-right: auto;
+			top: 20px;
+			background-color: lightgrey;
+		}
+		.main {
+			position: relative;
+			height: 850px;
+			width: 850px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			top: 0;
+			background-color: #f2f2f2;
+		}
+		.main img {
+			width: 25px;
+			height: 25px;
+			margin-left: 25px;
+		}
+		#container{
+			width: 700px;
+			height: 750px;
+			background-color: white;
+			padding: 20px 20px 20px 20px;
+			text-align: justify;
+			margin: 20px auto 20px auto;
+			font-size: 24px;
+			border-radius: 4px;
+		}
+		#container td {
+			padding: 10px 0px 10px 15px;
+		}
+		.wrap {
+			width: 850px;
+			height: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			vertical-align: top;
+		}
+		.navlist {
+			vertical-align: top;
+		}
+		#filler {
+			height:15px;
+		}
+		.footer {
+			background-color: #222;
+			margin: 0px auto 0px auto;
+			height: 75px;
+			width: 850px;
+			color: white;
+			font-size: 20px;
+		}
+		.footer ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    top: 0;
+		    display: block;
+			}
+
+		.footer li {
+			padding: 5px 16px;
+			width: 300px;
+			}
+		#logo {
+			text-align: center;
+			font-size: 128px;
+			font-family: "Niagara Solid";
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<div class="wrap">
+				<img src="Ico.png" width="50" height="50">
+				<ul class="navlist">
+					<li><img src="Ico.png" width="50" height="50"></li>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="rent.html">Rent</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="header">
+		<img class="header" src="header.jpg">
+	</div>
+	<div class = "main">
+		<div id="filler"></div>
+		<div id="container">
+			<table>
+				<tr><td><img src="phone.png"></td><td>+9248192419274</td><td rowspan="3" id="logo">ZuHause©</td></tr>
+				<tr><td><img src="mail.png"></td><td>zuhaus@zh.com</td></tr>
+				<tr><td><img src="street.png"></td><td>Pushkinskata 42, 6</td></tr>
+			</table>
+			<div style="width:650px;overflow:hidden;height:500px;max-width:100%;margin: 35px auto 0px auto;">
+					<div id="my-map-display" style="height:100%; width:100%;max-width:100%;">
+						<iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Pushkins'ka+Street,+Odessa,+Odessa+Oblast,+Ukraine&key=AIzaSyAT9n_Hw-Q0pTn6oRhkdtdjsHBmpHl8q0E"></iframe>
+					</div>
+					<style>#my-map-display .map-generator{max-width: 100%; max-height: 100%; background: none;</style>
+				</div>
+		</div>
+	</div>
+	<div class="footer"> 
+		<ul>
+			<li>All rights are not reserved</li>
+			<li>© 2017–2017</li>
+		</ul>
+	</div>
+</body>
+</html>
